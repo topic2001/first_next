@@ -22,7 +22,7 @@ export default function App() {
           style={{ ...alignCenter, justifyContent: "flex-start" }}
         >
           <div className={`${styles.card} ${styles.sticky}`}>
-            <p>I'm a sticky layer</p>
+            <p>Im a sticky layer</p>
           </div>
         </ParallaxLayer>
 
@@ -32,7 +32,7 @@ export default function App() {
           style={{ ...alignCenter, justifyContent: "flex-end" }}
         >
           <div className={`${styles.card} ${styles.parallax} ${styles.purple}`}>
-            <p>I'm not</p>
+            <p>Im not</p>
           </div>
         </ParallaxLayer>
 

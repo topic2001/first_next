@@ -1,51 +1,50 @@
 import React from "react";
-import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import styles from "../styles/Home.module.css";
 
 export default function App() {
-  const alignCenter = { display: "flex", alignItems: "center" };
+  // // load 27 random images from picsum
+  // var fragment = document.createDocumentFragment();
+  // for (var i = 0; i < 27; i++) {
+  //   // create photo div
+  //   var photo = document.createElement("div");
+  //   // add data-scroll attribute so ScrollOut will target these elements
+  //   photo.setAttribute("data-scroll", "");
+  //   // load the photo as a background image so it will fit nicely
+  //   photo.style.backgroundImage =
+  //     "url(https://picsum.photos/400/300/?random&hash=" + i + ")";
+  //   fragment.appendChild(photo);
+  // }
+  // // append document fragments to container
+  // document.querySelector(".container").appendChild(fragment);
+
+  // // call scrollout with variables enabled
+  // ScrollOut({
+  //   threshhold: 0.5,
+  //   cssProps: {
+  //     visibleY: true,
+  //   },
+  // });
   return (
-    <div>
-      <div className={styles.background} />
-
-      <Parallax pages={5}>
-        <ParallaxLayer
-          offset={0}
-          speed={0.5}
-          style={{ ...alignCenter, justifyContent: "center" }}
-        >
-          <p className={styles.scrollText}>Scroll down</p>
-        </ParallaxLayer>
-
-        <ParallaxLayer
-          sticky={{ start: 1, end: 3 }}
-          style={{ ...alignCenter, justifyContent: "flex-start" }}
-        >
-          <div className={`${styles.card} ${styles.sticky}`}>
-            <p>Im a sticky layer</p>
-          </div>
-        </ParallaxLayer>
-
-        <ParallaxLayer
-          offset={1.5}
-          speed={1.5}
-          style={{ ...alignCenter, justifyContent: "flex-end" }}
-        >
-          <div className={`${styles.card} ${styles.parallax} ${styles.purple}`}>
-            <p>Im not</p>
-          </div>
-        </ParallaxLayer>
-
-        <ParallaxLayer
-          offset={2.5}
-          speed={1.5}
-          style={{ ...alignCenter, justifyContent: "flex-end" }}
-        >
-          <div className={`${styles.card} ${styles.parallax} ${styles.blue}`}>
-            <p>Neither am I</p>
-          </div>
-        </ParallaxLayer>
-      </Parallax>
+    <div className={styles.container}>
+      {new Array(27).fill(0).map((_, idx) => (
+        // <Food key={idx} dd={idx} />
+        <div
+          className={styles.photo}
+          key={idx}
+          data-scroll=""
+          style={{
+            backgroundImage: `url("https://picsum.photos/400/300/?random&hash=${idx}")`,
+          }}
+        ></div>
+      ))}
     </div>
   );
 }
+
+// function Food({ dd }: { dd: number }) {
+//   return (
+//     <div>
+//       <h2>I love {dd}</h2>
+//     </div>
+//   );
+// }

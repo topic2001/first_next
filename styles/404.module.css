@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #1c1c1b;
+  flex-direction: column;
+  overflow: hidden;
+}
+.text {
+  color: #fff;
+  margin-top: 12px;
+}
+.centerText {
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+}
+.goback {
+  margin-top: 20px;
+  padding: 20px 30px;
+  border: 1px solid #d84315;
+  background: none;
+  outline: none;
+  appearance: none;
+  color: #d84315;
+  transition: 0.2s all;
+  cursor: pointer;
+}
+.goback:hover {
+  background: #d84315;
+  color: #fff;
+}

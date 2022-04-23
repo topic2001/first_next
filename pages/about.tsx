@@ -29,6 +29,16 @@ const About: NextPage = () => {
         />
 
         <ParallaxLayer
+          offset={1}
+          speed={1}
+          factor={2}
+          style={{
+            backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ),url(/space.jpg)`,
+            backgroundSize: "cover",
+          }}
+        ></ParallaxLayer>
+
+        <ParallaxLayer
           offset={2}
           speed={1}
           factor={4}
@@ -39,15 +49,26 @@ const About: NextPage = () => {
         ></ParallaxLayer>
 
         <ParallaxLayer
-          sticky={{ start: 0.9, end: 2.5 }}
+          sticky={{ start: 0.5, end: 3 }}
           style={{ textAlign: "center" }}
         >
-          <Image src="/cat.gif" layout="fill" />
+          <Image
+            src="/cat.gif"
+            layout="intrinsic"
+            width="200px"
+            height="200px"
+          />
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={0.2}
+          offset={-0.2}
           speed={0.05}
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            color: "white",
+          }}
           onClick={() => parallax.current.scrollTo(3)}
         >
           <h2>Welcome to my website</h2>
@@ -56,9 +77,15 @@ const About: NextPage = () => {
         <ParallaxLayer
           offset={3}
           speed={2}
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            color: "white",
+          }}
           onClick={() => parallax.current.scrollTo(0)}
         >
-          <h2>Hi Mom!!!!!!</h2>
+          <h2>Hi !!!!!!</h2>
         </ParallaxLayer>
       </Parallax>
     </div>

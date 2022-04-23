@@ -14,7 +14,8 @@
     "next": "12.1.5",
     "react": "18.0.0",
     "react-dom": "18.0.0",
-    "scroll-out": "^2.2.12"
+    "scroll-out": "^2.2.12",
+    "typeit-react": "^2.3.3"
   },
   "devDependencies": {
     "@types/node": "17.0.24",

@@ -1,0 +1,21 @@
+.intro {
+  height: 100vh;
+}
+
+.intro video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.sec {
+  height: 100vh;
+  color: black;
+}
+
+.sec h1 {
+  margin: auto auto;
+  padding-top: 45vh;
+  text-align: center;
+  font-size: 80px;
+}

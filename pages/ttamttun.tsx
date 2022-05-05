@@ -16,7 +16,7 @@ export default function App() {
       scrub: true,
       pin: IntroVideoRef.current,
       start: "center center",
-      end: "+=2000",
+      end: "+=4000",
       markers: true,
 
       onUpdate: function (self) {
@@ -28,8 +28,6 @@ export default function App() {
           if (videoCurrentTime) {
             videoRef.current.currentTime = videoCurrentTime;
           }
-
-          console.log(videoDuration, scrollPos, videoCurrentTime);
         }
       },
     });
@@ -38,10 +36,10 @@ export default function App() {
   return (
     <>
       <div ref={IntroVideoRef} className={styles.intro}>
-        <video id="video" ref={videoRef} src="/ttamttun8.mp4"></video>
+        <video id="video" ref={videoRef} src="/ttamttun.mp4"></video>
       </div>
       <section className={styles.sec}>
-        <h1>SECTION</h1>
+        <h1>ttamttun</h1>
       </section>
     </>
   );
